@@ -143,7 +143,7 @@ class App extends Component {
       0
     );
 
-    this.showAlert(`Product ${text} successfully to your cart!`, "success");
+    this.showAlert(`Product ${text} successfully ${text === 'added' ? 'to' : 'from'} your cart!`, "success");
 
     this.setState({ itemsCount: nr });
     this.calcTotalPrice(cartItems, this.state.currency);
